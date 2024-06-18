@@ -1,0 +1,7 @@
+<div *ngIf="!(users|async)">
+  <p>no users found</p>
+</div>
+
+<div *ngIf="users|async">
+  <div *ngFor="let user of users|async">{{user.surname}}, {{user.lastname}}</div>
+</div>
